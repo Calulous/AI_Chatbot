@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #343541;
+    color: #202123;
+}
+
+/* Whole application */
+.app {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left sidebar */
+.sidebar {
+    width: 250px;
+    padding: 18px;
+    background: #202123;
+    color: white;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.new-chat-button {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px;
+    color: white;
+    background: transparent;
+    border: 1px solid #565869;
+    border-radius: 8px;
+}
+
+.new-chat-button:hover {
+    background: #2a2b32;
+}
+
+/* Saved chat list */
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chat-item {
+    width: 100%;
+    padding: 11px;
+    overflow: hidden;
+    color: #ececf1;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+}
+
+.chat-item:hover,
+.chat-item.active {
+    background: #343541;
+}
+
+/* Main right area */
+.chat-area {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    padding: 22px;
+    background: #f7f7f8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header button {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+}
+
+/* Scrollable messages */
+.conversation {
+    flex: 1;
+    height: 500px;
+    margin: 20px 0;
+    padding: 18px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+/* Message bubbles */
+.message {
+    max-width: 72%;
+    margin: 12px 0;
+    padding: 12px 16px;
+    border-radius: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.user {
+    margin-left: auto;
+    color: white;
+    background: #10a37f;
+}
+
+.assistant {
+    margin-right: auto;
+    background: #ececf1;
+}
+
+/* Input row */
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    outline: none;
+}
+
+#messageInput:focus {
+    border-color: #10a37f;
+}
+
+button {
+    cursor: pointer;
+}
+
+#sendButton {
+    padding: 12px 20px;
+    color: white;
+    background: #10a37f;
+    border: none;
+    border-radius: 10px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.status {
+    min-height: 24px;
+    margin-top: 8px;
+}
+
+.error {
+    color: #c62828;
+}
