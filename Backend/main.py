@@ -39,7 +39,8 @@ FRONTEND_DIR = PROJECT_DIR / "Frontend"
 app = Flask(
     __name__,
     template_folder=str(FRONTEND_DIR / "templates"),
-    static_folder=str(FRONTEND_DIR)
+    static_folder=str(FRONTEND_DIR),
+    static_url_path="/static"
 )
 
 
