@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Chatbot</title>
+
+    <!-- External CSS file -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/styles.css') }}"
+    >
+</head>
+
+<body>
+    <main class="app">
+
+        <!-- Left sidebar -->
+        <aside class="sidebar">
+            <h2>AI Chat</h2>
+
+            <button id="newChatButton" class="new-chat-button">
+                + New Chat
+            </button>
+
+            <!-- Saved chats appear here -->
+            <div id="chatList" class="chat-list"></div>
+        </aside>
+
+        <!-- Main conversation area -->
+        <section class="chat-area">
+
+            <header class="header">
+                <h1 id="chatTitle">New Chat</h1>
+
+                <button id="clearChatButton">
+                    Clear Chat
+                </button>
+            </header>
+
+            <!-- Messages appear here -->
+            <section id="conversation" class="conversation"></section>
+
+            <div class="input-area">
+                <input
+                    id="messageInput"
+                    type="text"
+                    placeholder="Message AI Chat..."
+                    autocomplete="off"
+                >
+
+                <button id="sendButton">Send</button>
+            </div>
+
+            <div id="status" class="status"></div>
+
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
