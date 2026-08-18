@@ -47,10 +47,7 @@ http://127.0.0.1:5000
 
 ## OpenAI API Key
 
-The API key used during the technical assessment has **been included** in this repository.
-
-If the original key has expired or been disabled, please replace the API key in `app.py` with a valid OpenAI API key before running the application.
-
+The API key used during the technical assessment has ** not been included** in this repository.
 ---
 
 ## Project Structure
